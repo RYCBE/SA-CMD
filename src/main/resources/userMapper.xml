@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--
+    namespace: 名空间
+    id: 语句标识
+    resultType: 包装类型
+ -->
+<mapper namespace="user">
+    <select id="selectUsers" resultType="com.example.poshell.model.User">
+        select * from Users;
+    </select>
+</mapper>

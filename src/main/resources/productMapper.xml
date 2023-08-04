@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--
+    namespace: 名空间
+    id: 语句标识
+    resultType: 包装类型
+ -->
+<mapper namespace="product">
+    <select id="selectProducts" resultType="com.example.poshell.model.Product">
+        select * from products;
+    </select>
+    <insert id="insertProduct" parameterType="com.example.poshell.model.Product">
+        insert into products (id,name,price) values(#{id},#{name},#{price})
+    </insert>
+    <delete id="deleteProduct" parameterType="String">
+        delete from products where id=#{id}
+    </delete>
+</mapper>
